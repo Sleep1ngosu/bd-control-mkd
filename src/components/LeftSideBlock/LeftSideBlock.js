@@ -7,6 +7,7 @@ import ObjectsIcon from '../../assets/svg/icons/ObjectsIcon'
 import MeetingsIcon from '../../assets/svg/icons/MeetingsIcon'
 import RegistersIcon from '../../assets/svg/icons/RegistersIcon'
 import SettingsIcon from '../../assets/svg/icons/SettingsIcon'
+import VerticalLine from '../../assets/svg/Lines/VerticalLine'
 
 function LeftSideBlock(props) {
     const [clickState, setClickState] = useState({
@@ -35,6 +36,11 @@ function LeftSideBlock(props) {
         left: '4rem',
     }
 
+    const styleLine = {
+        position: 'absolute',
+        top: '-.1rem',
+    }
+
     const clickHandler = (e) => {
         setClickState({
             isClicked: !clickState.isClicked,
@@ -42,7 +48,13 @@ function LeftSideBlock(props) {
         props.onClick(e)
     }
 
-    let renderedArrow, renderedIcon
+    let renderedArrow, renderedIcon, renderedLine
+
+    if (props.isClicked) {
+        renderedLine = <VerticalLine style={styleLine} id={props.id} />
+    } else {
+        renderedLine = null
+    }
 
     switch (props.id) {
         case 'data': {
@@ -70,7 +82,6 @@ function LeftSideBlock(props) {
             break
         }
     }
-    console.log(props.id)
 
     if (props.isClicked) {
         renderedArrow = <ArrowUp style={styleArrow} id={props.id} />
@@ -84,9 +95,12 @@ function LeftSideBlock(props) {
             onClick={(e) => clickHandler(e)}
             id={props.id}
         >
+            {renderedLine}
             {renderedIcon}
             {renderedArrow}
-            <span className="LeftSideBlock__wrapper__text">{props.text}</span>
+            <span id={props.id} className="LeftSideBlock__wrapper__text">
+                {props.text}
+            </span>
         </div>
     )
 }
