@@ -1,0 +1,31 @@
+.left-side__textBlock__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+}
+
+.left-side__textBlock {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    width: 80%;
+    border-radius: .3rem;
+    padding-left: 1.6rem;
+    &:hover {
+        background-color: #D9D5EC;
+    }
+}
+
+.left-side__textBlock__text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.05em;
+
+    cursor: default;
+
+}

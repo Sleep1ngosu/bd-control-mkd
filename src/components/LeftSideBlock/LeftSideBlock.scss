@@ -1,0 +1,30 @@
+.LeftSideBlock__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 7rem;
+    border-top: .1rem solid #D9D5EC;
+    border-bottom: .1rem solid #D9D5EC;
+    border-collapse: separate;
+    z-index: 2;
+
+    margin-top: -.1rem;
+
+    &__text {
+        color: #333333;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.8rem;
+        line-height: 16px;
+        letter-spacing: 0.1rem;
+        padding-left: 7.5rem;
+        cursor: default;
+    }
+
+    &:hover {
+        background-color: #f2f0f9;
+    }
+
+}
