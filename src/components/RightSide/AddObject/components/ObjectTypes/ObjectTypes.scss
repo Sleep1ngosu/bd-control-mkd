@@ -1,0 +1,21 @@
+.objectTypes__type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-left: 2rem;
+    cursor: pointer;
+
+    &:hover {
+        border-bottom: .2rem solid #25213B;
+        color: #25213B;
+    }
+
+    &__text {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
+}

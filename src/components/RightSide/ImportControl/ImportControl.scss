@@ -1,0 +1,16 @@
+$primaryFieldFontColor: #6E6893;
+
+.ImportControl__wrapper {
+    width: 110rem;
+    height: 85rem;
+    margin-left: 8rem;
+    margin-top: 3.2rem;
+    color: $primaryFieldFontColor;
+}
+
+.ImportControl__field__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 1.6rem;
+}

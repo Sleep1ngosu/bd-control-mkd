@@ -1,0 +1,31 @@
+.addObject__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 12.5rem;
+    height: 4rem;
+    border-radius: .6rem;
+    border: none;
+    margin-right: 1rem;
+    transition: .5s;
+    cursor: pointer;
+
+    &:hover {
+        transition: .5s;
+        transform: scale(1.05);
+    }
+
+    &__text {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        text-transform: uppercase;
+    }
+}
+
+.push {
+    margin-left: auto;
+}

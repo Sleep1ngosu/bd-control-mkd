@@ -1,0 +1,64 @@
+.ImportControl__fieldRight__wrapper {
+    position: relative;
+    width: 69rem;
+    height: 78rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.2);
+    border-radius: .8rem;
+    background-color: white;
+    margin-left: 2rem;
+}
+
+.ImportControl__fieldRight {
+    &__header {
+        height: 6.5rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 2rem;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        height: 4rem;
+        width: 100%;
+        background-color: #F4F2FF;
+        border-top: .1rem solid #D9D5EC;
+        border-bottom: .1rem solid #D9D5EC;
+        ////////////////////
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #6E6893;
+        ////////////////////
+
+        &__leftTitle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25rem;
+            height: 4rem;
+        }
+
+        &__centerTitle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 19rem;
+            height: 4rem;
+        }
+
+        &__rightTitle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25rem;
+            height: 4rem;
+        }
+    }
+
+}

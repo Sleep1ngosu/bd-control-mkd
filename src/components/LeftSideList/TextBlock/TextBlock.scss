@@ -7,12 +7,14 @@
 }
 
 .left-side__textBlock {
+    position: relative;
     display: flex;
     align-items: center;
     height: 4rem;
     width: 80%;
     border-radius: .3rem;
     padding-left: 1.6rem;
+
     &:hover {
         background-color: #D9D5EC;
     }
@@ -27,5 +29,28 @@
     letter-spacing: 0.05em;
 
     cursor: default;
+
+}
+
+.objects__rectangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 3.2rem;
+    height: 2.4rem;
+    right: .5rem;
+    background: #95D160;
+    border-radius: .3rem;
+
+    &__text {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        letter-spacing: 0.05em;
+        color: white;
+    }
 
 }

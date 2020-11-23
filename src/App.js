@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import './App.scss'
 import LeftSideBlock from './components/LeftSideBlock/LeftSideBlock'
 import LeftSideList from './components/LeftSideList/LeftSideList'
+import AddObject from './components/RightSide/AddObject/AddObject'
 import arrays from './variables/arrays'
+import { Switch, Route } from 'react-router-dom'
+import ImportControl from './components/RightSide/ImportControl/ImportControl'
 
 function App() {
     const [listVisibility, setListVisibility] = useState({
@@ -55,17 +58,6 @@ function App() {
         }
     }
 
-    // const leftSideBlockList = arrays.blocks.map((value, index) => {
-    //     return (
-    //         <LeftSideBlock
-    //             text={value}
-    //             id={arrays.ids[index]}
-    //             onClick={(e) => changeListVisibility(e)}
-    //             isClicked={listVisibility[arrays.ids[index]].isVisible}
-    //         />
-    //     )
-    // })
-
     return (
         <div className="App">
             <div className="left-side__wrapper">
@@ -79,9 +71,10 @@ function App() {
                     isClicked={listVisibility.data.isVisible}
                 />
                 <LeftSideList
-                    arr={arrays.lists.data}
+                    arr={arrays.lists.data.list}
                     id="data"
                     style={listVisibility.data.display}
+                    redirect={arrays.lists.data.redirect}
                 />
                 <LeftSideBlock
                     text="ОБЪЕКТЫ"
@@ -90,9 +83,10 @@ function App() {
                     isClicked={listVisibility.objects.isVisible}
                 />
                 <LeftSideList
-                    arr={arrays.lists.objects}
+                    arr={arrays.lists.objects.list}
                     id="objects"
                     style={listVisibility.objects.display}
+                    redirect={arrays.lists.objects.redirect}
                 />
                 <LeftSideBlock
                     text="РЕЕСТРЫ"
@@ -101,9 +95,10 @@ function App() {
                     isClicked={listVisibility.registers.isVisible}
                 />
                 <LeftSideList
-                    arr={arrays.lists.registers}
+                    arr={arrays.lists.registers.list}
                     id="registers"
                     style={listVisibility.registers.display}
+                    redirect={arrays.lists.registers.redirect}
                 />
                 <LeftSideBlock
                     text="СОБРАНИЯ"
@@ -118,9 +113,29 @@ function App() {
                     isClicked={listVisibility.settings.isVisible}
                 />
             </div>
-            <div className="right-side__wrapper"></div>
+            <div className="right-side__wrapper">
+                {/* <Switch>
+                    <Route
+                        exact
+                        path="/add-object"
+                        render={() => <AddObject title="Добавить Объект" />}
+                    />
+                </Switch> */}
+                <ImportControl title="Контроль импорта выписок из егрн" />
+            </div>
         </div>
     )
 }
 
 export default App
+
+// const leftSideBlockList = arrays.blocks.map((value, index) => {
+//     return (
+//         <LeftSideBlock
+//             text={value}
+//             id={arrays.ids[index]}
+//             onClick={(e) => changeListVisibility(e)}
+//             isClicked={listVisibility[arrays.ids[index]].isVisible}
+//         />
+//     )
+// })
