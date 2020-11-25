@@ -5,13 +5,18 @@ function VerticalLine(props) {
         <svg
             id={props.id}
             style={props.style}
-            width="8"
-            height="70"
-            viewBox="0 0 8 70"
+            width={props.width}
+            height={props.height}
+            viewBox={`0 0 ${props.width} ${props.height}`}
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
         >
-            <rect width="8" height="70" fill="#95D160" id={props.id} />
+            <rect
+                width={props.width}
+                height={props.height}
+                fill="#95D160"
+                id={props.id}
+            />
         </svg>
     )
 }

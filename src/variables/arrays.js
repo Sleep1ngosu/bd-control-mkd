@@ -9,7 +9,7 @@ const arrays = {
                 'Мастер "Строения"',
                 'Мастер "Собственники"',
             ],
-            redirect: ['/', '/add-object', '/', '/'],
+            redirect: ['/import-control', '/add-object', '/', '/'],
         },
         objects: {
             list: ['Строения', 'Комплексы', 'ТСЖ', 'ЖСК', 'ГСК', 'СНТ'],

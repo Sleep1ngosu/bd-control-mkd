@@ -6,6 +6,7 @@ import AddObject from './components/RightSide/AddObject/AddObject'
 import arrays from './variables/arrays'
 import { Switch, Route } from 'react-router-dom'
 import ImportControl from './components/RightSide/ImportControl/ImportControl'
+import BuildsMenu from './components/BuildsMenu/BuildsMenu'
 
 function App() {
     const [listVisibility, setListVisibility] = useState({
@@ -112,16 +113,23 @@ function App() {
                     onClick={(e) => changeListVisibility(e)}
                     isClicked={listVisibility.settings.isVisible}
                 />
+                <BuildsMenu />
             </div>
             <div className="right-side__wrapper">
-                {/* <Switch>
+                <Switch>
                     <Route
                         exact
                         path="/add-object"
                         render={() => <AddObject title="Добавить Объект" />}
                     />
-                </Switch> */}
-                <ImportControl title="Контроль импорта выписок из егрн" />
+                    <Route
+                        exact
+                        path="/import-control"
+                        render={() => (
+                            <ImportControl title="Контроль импорта выписок из егрн" />
+                        )}
+                    />
+                </Switch>
             </div>
         </div>
     )

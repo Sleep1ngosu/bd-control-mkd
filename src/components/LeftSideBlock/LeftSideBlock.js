@@ -8,6 +8,7 @@ import MeetingsIcon from '../../assets/svg/icons/MeetingsIcon'
 import RegistersIcon from '../../assets/svg/icons/RegistersIcon'
 import SettingsIcon from '../../assets/svg/icons/SettingsIcon'
 import VerticalLine from '../../assets/svg/Lines/VerticalLine'
+import BuildsMenu from '../BuildsMenu/BuildsMenu'
 
 function LeftSideBlock(props) {
     const [clickState, setClickState] = useState({
@@ -17,14 +18,6 @@ function LeftSideBlock(props) {
         display: 'none',
     }
     let arrowDownStyle = {}
-
-    if (clickState.isClicked) {
-        arrowUpStyle.display = 'block'
-        arrowDownStyle.display = 'none'
-    } else {
-        arrowUpStyle.display = 'none'
-        arrowDownStyle.display = 'block'
-    }
 
     const styleArrow = {
         position: 'absolute',
@@ -41,6 +34,14 @@ function LeftSideBlock(props) {
         top: '-.1rem',
     }
 
+    if (clickState.isClicked) {
+        arrowUpStyle.display = 'block'
+        arrowDownStyle.display = 'none'
+    } else {
+        arrowUpStyle.display = 'none'
+        arrowDownStyle.display = 'block'
+    }
+
     const clickHandler = (e) => {
         setClickState({
             isClicked: !clickState.isClicked,
@@ -51,7 +52,14 @@ function LeftSideBlock(props) {
     let renderedArrow, renderedIcon, renderedLine
 
     if (props.isClicked) {
-        renderedLine = <VerticalLine style={styleLine} id={props.id} />
+        renderedLine = (
+            <VerticalLine
+                style={styleLine}
+                id={props.id}
+                width=".8rem"
+                height="7rem"
+            />
+        )
     } else {
         renderedLine = null
     }
@@ -82,12 +90,14 @@ function LeftSideBlock(props) {
             break
         }
     }
-
     if (props.isClicked) {
         renderedArrow = <ArrowUp style={styleArrow} id={props.id} />
     } else {
         renderedArrow = <ArrowDown style={styleArrow} id={props.id} />
     }
+
+    let buildsMenu
+    props.id === 'objects' ? (buildsMenu = <BuildsMenu />) : (buildsMenu = null)
 
     return (
         <div
@@ -101,6 +111,7 @@ function LeftSideBlock(props) {
             <span id={props.id} className="LeftSideBlock__wrapper__text">
                 {props.text}
             </span>
+            {/* {buildsMenu} */}
         </div>
     )
 }

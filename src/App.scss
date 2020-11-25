@@ -16,7 +16,7 @@ html {
 
 .left-side__wrapper {
   height: 100vh;
-  width: $LeftSideWidth;
+  min-width: $LeftSideWidth;
 
   &__logo {
     display: flex;
@@ -41,6 +41,7 @@ html {
 }
 
 .right-side__wrapper {
+  position: relative;
   display: flex;
   flex-grow: 2;
   height: 100vh;

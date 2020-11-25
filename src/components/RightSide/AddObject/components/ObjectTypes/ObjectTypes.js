@@ -7,7 +7,14 @@ function ObjectTypes(props) {
     }
 
     return (
-        <div className="objectTypes__type" style={style}>
+        <div
+            className={
+                props.isActive
+                    ? `active objectTypes__type`
+                    : `objectTypes__type`
+            }
+            style={style}
+        >
             <span className="objectTypes__type__text">{props.text}</span>
         </div>
     )
