@@ -1,8 +1,9 @@
 import React from 'react'
 
-function SearchIcon() {
+function SearchIcon(props) {
     return (
         <svg
+            style={props.style}
             width="19"
             height="18"
             viewBox="0 0 19 18"

@@ -6,23 +6,26 @@ import ImportControl from './components/RightSide/ImportControl/ImportControl'
 import MainLeftSide from './components/MainLeftSide/MainLeftSide'
 import ObjectsSide from './components/ObjectsSide/ObjectsSide'
 import ObjectsSideHeader from './components/ObjectsSide/ObjectsSideHeader/ObjectsSideHeader'
+import Building from './components/RightSide/Building/Building'
 
 function App() {
     return (
         <div className="App">
-            {/* <ObjectsSideHeader /> */}
+            <ObjectsSideHeader />
             <div className="left-side__wrapper">
-                {/* <ObjectsSide /> */}
-                <div className="left-side__main">
+                <ObjectsSide />
+                {/* <div className="left-side__main">
                     <div className="left-side__wrapper__logo">
                         <span className="left-side__wrapper__logo__text">
                             LOGO
                         </span>
                     </div>
                     <MainLeftSide />
-                </div>
+                </div> */}
             </div>
             <div className="right-side__wrapper">
+                <Building />
+
                 <Switch>
                     <Route
                         exact
