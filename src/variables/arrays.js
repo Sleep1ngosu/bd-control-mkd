@@ -38,6 +38,7 @@ const arrays = {
             'Этажность',
         ],
     },
+    ObjectsSideHeader: ['Данные', 'Отчеты', 'Собрания', 'Настройки'],
 }
 
 export default arrays

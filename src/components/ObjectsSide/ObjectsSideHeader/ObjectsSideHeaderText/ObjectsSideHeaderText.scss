@@ -1,0 +1,19 @@
+.ObjectsSideHeader__text {
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 10rem;
+        height: 4rem;
+    }
+
+    &__text {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.05em;
+        color: #000000;
+    }
+}

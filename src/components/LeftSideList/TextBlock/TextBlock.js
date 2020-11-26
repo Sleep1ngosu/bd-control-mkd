@@ -2,17 +2,14 @@ import React, { useState } from 'react'
 import './TextBlock.scss'
 import history from '../../../history'
 import BuildsMenu from '../../BuildsMenu/BuildsMenu'
+import ObjectsRectangle from '../../ObjectsSide/ObjectsRectangle/ObjectsRectangle'
 
 function TextBlock(props) {
     let rectangle = null,
         buildsMenu = null
 
     if (props.id === 'objects') {
-        rectangle = (
-            <div className="objects__rectangle">
-                <span className="objects__rectangle__text">0</span>
-            </div>
-        )
+        rectangle = <ObjectsRectangle text="0" />
     }
 
     const [isVisible, setVisible] = useState(false)

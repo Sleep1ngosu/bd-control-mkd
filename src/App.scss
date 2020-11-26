@@ -17,6 +17,7 @@ html {
 .left-side__wrapper {
   height: 100vh;
   min-width: $LeftSideWidth;
+  position: relative;
 
   &__logo {
     display: flex;

@@ -1,0 +1,32 @@
+.ObjectsSideBlock__wrapper {
+    display: flex;
+    justify-content: center;
+    height: 4.8rem;
+    width: 100%;
+    margin-top: .8rem;
+}
+
+.ObjectsSideBlock {
+    &__field {
+        display: flex;
+        align-items: center;
+        padding-left: 2.4rem;
+        width: 32rem;
+        position: relative;
+
+        &:hover {
+            background-color: #D9D5EC;
+            border-radius: .3rem;
+        }
+
+        &__text {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.8rem;
+            line-height: 2.1rem;
+            letter-spacing: 0.05em;
+            color: #333333;
+        }
+    }
+}

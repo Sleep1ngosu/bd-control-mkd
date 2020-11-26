@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './LeftSideList.scss'
 import TextBlock from './TextBlock/TextBlock'
+import ObjectsSelect from './ObjectsSelect/ObjectsSelect'
 
 function LeftSideList(props) {
     const style = {
@@ -11,13 +12,7 @@ function LeftSideList(props) {
         select = null
 
     if (props.id === 'objects') {
-        select = (
-            <select className="objects__select">
-                <option value="something 1">something 1</option>
-                <option value="something 2">something 2</option>
-                <option value="something 3">something 3</option>
-            </select>
-        )
+        select = <ObjectsSelect marginBottom="2.5rem" />
     }
 
     if (props.arr) {
