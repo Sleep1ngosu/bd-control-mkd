@@ -113,7 +113,6 @@ function App() {
                     onClick={(e) => changeListVisibility(e)}
                     isClicked={listVisibility.settings.isVisible}
                 />
-                <BuildsMenu />
             </div>
             <div className="right-side__wrapper">
                 <Switch>

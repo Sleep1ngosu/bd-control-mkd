@@ -2,9 +2,9 @@ import React from 'react'
 import './Info.scss'
 import Text from './Text/Text'
 
-function Info() {
+function Info(props) {
     return (
-        <div className="BuildsMenu__block__info__wrapper">
+        <div className="BuildsMenu__block__info__wrapper" style={props.style}>
             <div className="BuildsMenu__block__info__header">
                 <Text text="77:01:002001:2154" />
                 <Text text="Дата постройки: 2001 г." />

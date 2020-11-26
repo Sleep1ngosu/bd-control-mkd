@@ -19,6 +19,7 @@ function BuildsMenu(props) {
             }}
             hoveredIconColor={consts.hoveredIconColor}
             unhoveredIconColor={consts.unhoveredIconColor}
+            key="BuildsMenu__hoveredIcon__filterIcon"
         />
     )
     let sortIcon = useState(
@@ -32,41 +33,70 @@ function BuildsMenu(props) {
             }}
             hoveredIconColor={consts.hoveredIconColor}
             unhoveredIconColor={consts.unhoveredIconColor}
+            key="BuildsMenu__hoveredIcon__sortIcon"
         />
     )
 
-    const [isVisible, setIsVisible] = useState(true)
     let style = {
         display: 'none',
     }
 
-    isVisible === false ? (style.display = 'none') : (style.display = 'block')
+    props.isVisible === true
+        ? (style.display = 'block')
+        : (style.display = 'none')
+
+    const array = ['ул. Ленина, дом 7, корп. 1', 'ул. Ленина, дом 7, корп. 1']
+    const arraySubtitle = ['многоквартирный дом', 'многоквартирный дом']
+    let styleArr = []
+    for (let i = 0; i < array.length; i++) {
+        styleArr.push('none')
+    }
+    const [visibleID, setVisibleID] = useState(undefined)
+
+    const onClickInfo = (e) => {
+        if (e.target.id === visibleID) {
+            setVisibleID(undefined)
+        } else {
+            setVisibleID(e.target.id)
+        }
+    }
+
+    const BlockList = array.map((value, index) => {
+        return (
+            <Block
+                key={`BuildsMenu__Block__${index}`}
+                index={index}
+                title={value}
+                subtitle={arraySubtitle[index]}
+                onClickInfo={(e) => onClickInfo(e)}
+                visibleID={visibleID}
+            />
+        )
+    })
 
     return (
-        <div className="BuildsMenu__wrapper" style={style}>
-            <div className="BuildsMenu__header__wrapper">
-                <div className="BuildsMenu__header">
-                    <div className="BuildsMenu__searchIcon">
-                        <SearchIcon />
+        <div className="BuildsMenu__wrapper__wrapper">
+            {/* <div
+                className="BuildsMenu__closeWrapper"
+                onCLick={closeHandler}
+                style={styleClose}
+            ></div> */}
+            <div className="BuildsMenu__wrapper" style={style}>
+                <div className="BuildsMenu__header__wrapper">
+                    <div className="BuildsMenu__header">
+                        <div className="BuildsMenu__searchIcon">
+                            <SearchIcon />
+                        </div>
+                        {filterIcon}
+                        {sortIcon}
+                        <input
+                            type="text"
+                            className="BuildsMenu__header__input"
+                            placeholder="Поиск..."
+                        />
                     </div>
-                    {filterIcon}
-                    {sortIcon}
-                    <input
-                        type="text"
-                        className="BuildsMenu__header__input"
-                        placeholder="Поиск..."
-                    />
                 </div>
-            </div>
-            <div classNmae="BuildsMenu__body">
-                <Block
-                    title="ул. Ленина, дом 7, корп. 1"
-                    subtitle="многоквартирный дом"
-                />
-                {/* <Block
-                    title="ул. Ленина, дом 7, корп. 1"
-                    subtitle="многоквартирный дом"
-                /> */}
+                <div className="BuildsMenu__body">{BlockList}</div>
             </div>
         </div>
     )

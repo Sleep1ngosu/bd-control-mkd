@@ -9,35 +9,52 @@ function Block(props) {
     const moreIcon = useState(
         <HoveredIcon
             Component={MoreIcon}
-            style={{
-                position: 'absolute',
-                top: '50%',
-                transform: 'translateY(-50%)',
-                right: '.8rem',
-                cursor: 'pointer',
-            }}
             hoveredIconColor={consts.hoveredMoreIconColor}
             unhoveredIconColor={consts.unhoveredMoreIconColor}
+            key="BuildsMenu__Block__hoveredIcon__moreIcon"
+            id={`BuildsMenu__block__${props.index}`}
         />
     )
 
+    let style
+    props.visibleID === `BuildsMenu__block__${props.index}`
+        ? (style = { display: 'block' })
+        : (style = { display: 'none' })
+
+    // let styleInfo
+    // const [isVisibleInfo, setVisibleInfo] = useState(false)
+    // isVisibleInfo === true
+    //     ? (styleInfo = { display: 'block' })
+    //     : (styleInfo = { display: 'none' })
+
+    // const changeVisibilityInfo = () => {
+    //     setVisibleInfo(!isVisibleInfo)
+    // }
+
     return (
-        <div className="BuildsMenu__block__wrapper">
-            {moreIcon}
-            <div className="BuildsMenu__block__title">
-                <span
-                    title={props.title}
-                    className="BuildsMenu__block__title__text"
+        <div className="BuildsMenu__block__wrapper__wrapper">
+            <div className="BuildsMenu__block__wrapper">
+                <div
+                    className="BuildsMenu__block__moreIcon"
+                    onClick={props.onClickInfo}
                 >
-                    {props.title}
-                </span>
+                    {moreIcon}
+                </div>
+                <div className="BuildsMenu__block__title">
+                    <span
+                        title={props.title}
+                        className="BuildsMenu__block__title__text"
+                    >
+                        {props.title}
+                    </span>
+                </div>
+                <div className="BuildsMenu__block__subtitle">
+                    <span className="BuildsMenu__block__subtitle__text">
+                        {props.subtitle}
+                    </span>
+                </div>
             </div>
-            <div className="BuildsMenu__block__subtitle">
-                <span className="BuildsMenu__block__subtitle__text">
-                    {props.subtitle}
-                </span>
-            </div>
-            <Info />
+            <Info style={style} />
         </div>
     )
 }

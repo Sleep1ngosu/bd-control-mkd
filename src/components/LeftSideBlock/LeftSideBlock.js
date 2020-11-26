@@ -56,8 +56,8 @@ function LeftSideBlock(props) {
             <VerticalLine
                 style={styleLine}
                 id={props.id}
-                width=".8rem"
-                height="7rem"
+                width="8"
+                height="70"
             />
         )
     } else {
@@ -96,9 +96,6 @@ function LeftSideBlock(props) {
         renderedArrow = <ArrowDown style={styleArrow} id={props.id} />
     }
 
-    let buildsMenu
-    props.id === 'objects' ? (buildsMenu = <BuildsMenu />) : (buildsMenu = null)
-
     return (
         <div
             className="LeftSideBlock__wrapper"
@@ -111,7 +108,6 @@ function LeftSideBlock(props) {
             <span id={props.id} className="LeftSideBlock__wrapper__text">
                 {props.text}
             </span>
-            {/* {buildsMenu} */}
         </div>
     )
 }

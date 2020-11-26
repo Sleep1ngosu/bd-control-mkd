@@ -5,6 +5,10 @@
     border-bottom: .1rem solid #D9D5EC;
     cursor: default;
 
+    &__wrapper {
+        position: relative;
+    }
+
     &:hover {
         background-color: #F2F0F9;
     }
@@ -12,6 +16,14 @@
 }
 
 .BuildsMenu__block {
+    &__moreIcon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: .8rem;
+        cursor: pointer;
+    }
+
     &__title {
         display: flex;
         align-items: center;

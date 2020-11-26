@@ -12,11 +12,7 @@ function StructureBlock(props) {
 
     return (
         <div className="structureBlock__wrapper">
-            <VertivalLine
-                style={verticalLineStyle}
-                width=".8rem"
-                height="5.5rem"
-            />
+            <VertivalLine style={verticalLineStyle} width="8" height="55" />
             <div className="clip structureBlock__title">
                 <span
                     title={props.title}
