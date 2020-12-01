@@ -8,7 +8,6 @@ import MeetingsIcon from '../../assets/svg/icons/MeetingsIcon'
 import RegistersIcon from '../../assets/svg/icons/RegistersIcon'
 import SettingsIcon from '../../assets/svg/icons/SettingsIcon'
 import VerticalLine from '../../assets/svg/Lines/VerticalLine'
-import BuildsMenu from '../BuildsMenu/BuildsMenu'
 
 function LeftSideBlock(props) {
     const [clickState, setClickState] = useState({

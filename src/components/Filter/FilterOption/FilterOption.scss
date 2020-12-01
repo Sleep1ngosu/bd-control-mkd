@@ -1,0 +1,32 @@
+[class*=Filter__option--] {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 20.4rem;
+    height: 2.7rem;
+    margin-left: 1rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    letter-spacing: 0.05em;
+    color: #25213B;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #F2F0F9;
+        border-radius: .4rem;
+    }
+}
+
+.Filter__option__text {
+    padding-left: 1rem;
+}
+
+.Filter__option__radio {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: .6rem;
+}

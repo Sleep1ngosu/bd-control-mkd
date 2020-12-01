@@ -1,0 +1,119 @@
+.ToggleBlockOwner__wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 5.5rem;
+    border-bottom: .1rem solid #D9D5EC;
+}
+
+.ToggleBlockOwner__moreIcon {
+    z-index: 2;
+    position: absolute;
+    left: 106rem;
+    top: 1.8rem;
+}
+
+.ToggleBlockOwner__column {
+    &--1 {
+        width: 39.2rem;
+        height: 100%;
+        margin-left: 8rem;
+        padding-top: .6rem;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        color: #25213B;
+    }
+
+    &--2 {
+        width: 11.2rem;
+        height: 100%;
+        margin-left: .8rem;
+
+        &__title {
+            display: flex;
+            align-items: center;
+            height: 2.8rem;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            color: #25213B;
+        }
+
+        &__subtitle {
+            display: flex;
+            align-items: center;
+            height: 2.7rem;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            color: #6E6893;
+        }
+    }
+
+    &--3 {
+        width: 17.8rem;
+        height: 100%;
+        margin-left: 5.7rem;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        text-align: center;
+        color: #6E6893;
+
+        &__title,
+        &__subtitle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 1.6rem;
+            margin-top: .7rem;
+        }
+    }
+
+    &--4 {
+        width: 14.2rem;
+        height: 100%;
+        margin-left: 3.1rem;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        text-align: center;
+        color: #6E6893;
+
+        &__title,
+        &__subtitle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 1.6rem;
+            margin-top: .7rem;
+        }
+
+        &__false {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 14.2rem;
+            height: 100%;
+            margin-left: 3.1rem;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+            text-align: center;
+            color: #D30000;
+        }
+    }
+}

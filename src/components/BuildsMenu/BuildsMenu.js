@@ -6,22 +6,28 @@ import SortIcon from '../../assets/svg/icons/SortIcon'
 import HoveredIcon from '../../HOCs/HoveredIcon'
 import Block from './Block/Block'
 import consts from '../../variables/consts'
+import arrays from '../../variables/arrays'
+import Filter from '../Filter/Filter'
 
 function BuildsMenu(props) {
-    let filterIcon = useState(
-        <HoveredIcon
-            Component={FilterIcon}
-            style={{
-                position: 'absolute',
-                top: '50%',
-                transform: 'translateY(-50%)',
-                right: '3.2rem',
-            }}
-            hoveredIconColor={consts.hoveredIconColor}
-            unhoveredIconColor={consts.unhoveredIconColor}
-            key="BuildsMenu__hoveredIcon__filterIcon"
-        />
-    )
+    // let filterIcon = useState(
+    //     <HoveredIcon
+    //         Component={FilterIcon}
+    //         style={{
+    //             position: 'absolute',
+    //             top: '50%',
+    //             transform: 'translateY(-50%)',
+    //             right: '3.2rem',
+    //         }}
+    //         hoveredIconColor={consts.hoveredIconColor}
+    //         unhoveredIconColor={consts.unhoveredIconColor}
+    //         key="BuildsMenu__hoveredIcon__filterIcon"
+    //     />
+    // )
+    let filterStyle, filterIcon
+    let [filterIsHovered, setFilterHover] = useState(false)
+    let [filterIsShow, setFilterShow] = useState(false)
+
     let sortIcon = useState(
         <HoveredIcon
             Component={SortIcon}
@@ -37,18 +43,31 @@ function BuildsMenu(props) {
         />
     )
 
+    const filterHoverToggle = () => {
+        setFilterHover(!filterIsHovered)
+    }
+    const filterShowToggle = () => {
+        setFilterShow(!filterIsShow)
+    }
+
+    filterIsHovered
+        ? (filterIcon = <FilterIcon color={consts.hoveredIconColor} />)
+        : (filterIcon = <FilterIcon color={consts.unhoveredIconColor} />)
+
+    filterIsShow
+        ? (filterStyle = { display: 'block' })
+        : (filterStyle = { display: 'none' })
+
     let style = {
         display: 'none',
     }
 
     props.isVisible === true
-        ? (style.display = 'block')
+        ? (style.display = 'flex')
         : (style.display = 'none')
 
-    const array = ['ул. Ленина, дом 7, корп. 1', 'ул. Ленина, дом 7, корп. 1']
-    const arraySubtitle = ['многоквартирный дом', 'многоквартирный дом']
     let styleArr = []
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 0; i < arrays.Buildings.title.length; i++) {
         styleArr.push('none')
     }
     const [visibleID, setVisibleID] = useState(undefined)
@@ -61,13 +80,13 @@ function BuildsMenu(props) {
         }
     }
 
-    const BlockList = array.map((value, index) => {
+    const BlockList = arrays.Buildings.title.map((value, index) => {
         return (
             <Block
                 key={`BuildsMenu__Block__${index}`}
                 index={index}
                 title={value}
-                subtitle={arraySubtitle[index]}
+                subtitle={arrays.Buildings.subtitle[index]}
                 onClickInfo={(e) => onClickInfo(e)}
                 visibleID={visibleID}
             />
@@ -87,7 +106,23 @@ function BuildsMenu(props) {
                         <div className="BuildsMenu__searchIcon">
                             <SearchIcon />
                         </div>
-                        {filterIcon}
+                        {/* {filterIcon} */}
+                        <div className="BuildsMenu__filterIcon">
+                            <div
+                                onClick={filterShowToggle}
+                                onMouseEnter={filterHoverToggle}
+                                onMouseLeave={filterHoverToggle}
+                                className="BuildsMenu__filterIcon__icon"
+                            >
+                                {filterIcon}
+                            </div>
+                            <div
+                                style={filterStyle}
+                                className="BuildsMenu__filterMenu"
+                            >
+                                <Filter />
+                            </div>
+                        </div>
                         {sortIcon}
                         <input
                             type="text"

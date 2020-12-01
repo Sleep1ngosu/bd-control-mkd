@@ -3,29 +3,24 @@ import './App.scss'
 import AddObject from './components/RightSide/AddObject/AddObject'
 import { Switch, Route } from 'react-router-dom'
 import ImportControl from './components/RightSide/ImportControl/ImportControl'
-import MainLeftSide from './components/MainLeftSide/MainLeftSide'
 import ObjectsSide from './components/ObjectsSide/ObjectsSide'
 import ObjectsSideHeader from './components/ObjectsSide/ObjectsSideHeader/ObjectsSideHeader'
 import Building from './components/RightSide/Building/Building'
+import LeftSide from './components/LeftSide/LeftSide'
 
 function App() {
     return (
         <div className="App">
-            <ObjectsSideHeader />
+            <Switch>
+                <Route path="/buildings" component={ObjectsSideHeader} />
+            </Switch>
             <div className="left-side__wrapper">
-                <ObjectsSide />
-                {/* <div className="left-side__main">
-                    <div className="left-side__wrapper__logo">
-                        <span className="left-side__wrapper__logo__text">
-                            LOGO
-                        </span>
-                    </div>
-                    <MainLeftSide />
-                </div> */}
+                <Switch>
+                    <Route path="/buildings" component={ObjectsSide} />
+                    <Route path="/" component={LeftSide} />
+                </Switch>
             </div>
             <div className="right-side__wrapper">
-                <Building />
-
                 <Switch>
                     <Route
                         exact
@@ -39,6 +34,8 @@ function App() {
                             <ImportControl title="Контроль импорта выписок из егрн" />
                         )}
                     />
+
+                    <Route path="/buildings" component={Building} />
                 </Switch>
             </div>
         </div>

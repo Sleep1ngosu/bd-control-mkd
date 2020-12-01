@@ -1,6 +1,7 @@
 import React from 'react'
 import './Info.scss'
 import Text from './Text/Text'
+import { Link } from 'react-router-dom'
 
 function Info(props) {
     return (
@@ -18,11 +19,21 @@ function Info(props) {
                 <Text text="из них квартир: 176" />
             </div>
             <div className="BuildsMenu__block__info__footer">
-                <button className="BuildsMenu__block__info__footer__button">
-                    <span className="BuildsMenu__block__info__footer__button__text">
-                        Перейти
-                    </span>
-                </button>
+                <Link
+                    to={{
+                        pathname: `buildings/${props.index}`,
+                        state: {
+                            title: props.title,
+                        },
+                    }}
+                    style={{ textDecoration: 'none' }}
+                >
+                    <button className="BuildsMenu__block__info__footer__button">
+                        <span className="BuildsMenu__block__info__footer__button__text">
+                            Перейти
+                        </span>
+                    </button>
+                </Link>
             </div>
         </div>
     )

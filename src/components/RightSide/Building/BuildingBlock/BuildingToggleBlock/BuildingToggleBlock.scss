@@ -1,0 +1,14 @@
+.BuildingToggleBlock {
+
+    &__header {
+        display: flex;
+        height: 4.5rem;
+        width: 100%;
+        border-bottom: .1rem solid #D9D5EC;
+    }
+
+    &__body {
+        width: 100%;
+    }
+
+}

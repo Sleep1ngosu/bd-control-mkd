@@ -5,7 +5,7 @@ $primaryFieldFontColor: #6E6893;
     height: 85rem;
     width: 110rem;
     // border: .1rem solid black;
-    margin-left: 8rem;
+    margin-left: 3rem;
     margin-top: 7.2rem;
     color: $primaryFieldFontColor;
 }
@@ -94,7 +94,7 @@ $primaryFieldFontColor: #6E6893;
                         border-radius: .3rem;
                         outline: none;
                         padding-left: 4rem;
-                        font-size: 1.6  rem;
+                        font-size: 1.6 rem;
                     }
                 }
             }
@@ -143,8 +143,39 @@ $primaryFieldFontColor: #6E6893;
             }
         }
 
-    }
+        &__body {
+            height: 63.4rem;
+            overflow: scroll;
+            overflow-x: hidden;
+        }
 
+
+
+        &__title {
+            position: relative;
+            height: 4rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            background-color: #F4F2FF;
+            border-bottom: .1rem solid #D9D5EC;
+
+            &__sub {
+                width: 62rem;
+                height: 100%;
+                display: flex;
+                margin-left: auto;
+            }
+
+            &__checkbox {
+                position: absolute;
+                left: 1.6rem;
+                height: 2rem;
+                width: 2rem;
+            }
+        }
+
+    }
 
 
     &__footer {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Building.scss'
 import ObjectTypes from '../AddObject/components/ObjectTypes/ObjectTypes'
+import BuildingTitle from './BuildingTitles/BuildingTitle'
 import MapIcon from '../../../assets/svg/icons/MapIcon'
 import DocumentIcon from '../../../assets/svg/icons/DocumentIcon'
 import ClipboardIcon from '../../../assets/svg/icons/ClipboardIcon'
@@ -10,7 +11,10 @@ import RefreshIcon from '../../../assets/svg/icons/RefreshIcon'
 import HoveredIcon from '../../../HOCs/HoveredIcon'
 import CalendarIcon from '../../../assets/svg/icons/CalendarIcon'
 import PeopleIcon from '../../../assets/svg/icons/PeopleIcon'
+import CheckboxIcon from '../../../assets/svg/icons/CheckBoxIcon'
+import CheckboxIconActive from '../../../assets/svg/icons/CheckBoxActiveIcon'
 import consts from '../../../variables/consts'
+import BuildingBlock from './BuildingBlock/BuildingBlock'
 
 function Building(props) {
     const mapIconStyle = {
@@ -124,8 +128,7 @@ function Building(props) {
                 <ClipboardIcon style={ClipboardIconStyle} />
                 <div className="Building__header__title">
                     <span className="Building__header__title__text">
-                        г. Москва, ул. Ленина, дом 7, корп. 1 (многоквартирный
-                        дом)
+                        {props.location.state.title}
                     </span>
                 </div>
                 <div className="Building__header__subtitle">
@@ -177,8 +180,52 @@ function Building(props) {
                         </div>
                     </div>
                 </div>
-                <div className="Building__field__title"></div>
-                <div className="Building__field__body"></div>
+                <div className="Building__field__title">
+                    <div className="Building__field__title__checkbox">
+                        <CheckboxIcon />
+                    </div>
+                    <BuildingTitle
+                        text="Номер помещения"
+                        marginLeft="8rem"
+                        width="20rem"
+                    />
+                    <div className="Building__field__title__sub">
+                        <BuildingTitle text="Площадь" width="11.2rem" />
+                        <BuildingTitle
+                            text="Назначение"
+                            width="10.4rem"
+                            marginLeft="4rem"
+                        />
+                        <BuildingTitle
+                            text="Статус"
+                            width="11.2rem"
+                            marginLeft="3.2rem"
+                        />
+                        <BuildingTitle
+                            text="Собственники"
+                            width="12.8rem"
+                            marginLeft="3.2rem"
+                        />
+                    </div>
+                </div>
+                <div className="Building__field__body">
+                    <BuildingBlock
+                        title_1="этаж 1, помещение I - комнаты 1, 2, 2а, 2б, с 3 по 9, 39, 46, 53, 54, 58; этаж 2, помещение I - комнаты 1, 1а, 38; этаж 3, помещение I - комнаты 1, 1а, с 2 по 33, 33а, 33б, 34, 35; этаж 4, помещение I - комнаты 1, 1а, с 2 по 30, 30а, 30б, 31, 32; этаж 5, помещение I - комнаты 1, 1а, с 2 по 10, 10а, 11, 12; этаж 1, помещение I - комнаты 1, 2, 2а, 2б, с 3 по 9, 39, 46, 53, 54, 58; этаж 2, помещение I - комнаты 1, 1а, 38; этаж 3, помещение I - комнаты 1, 1а, с 2 по 33, 33а, 33б, 34, 35; этаж 4, помещение I - комнаты 1, 1а, с 2 по 30, 30а, 30б, 31, 32;"
+                        subtitle_1="77:01:0002012:3554"
+                        title_2="55,9 кв.м"
+                        subtitle_2="0,35 %"
+                        title_3="Жилое"
+                        subtitle_3="Этаж 1"
+                        title_4="Действующее"
+                        subtitle_4="с 12.07.2014"
+                        title_5="Собственники:"
+                        subtitle_5="Члены ТСЖ:"
+                        index="1"
+                        rectangleTop="10"
+                        rectangleBottom="1"
+                        status="true"
+                    />
+                </div>
             </div>
             <div className="Building__footer"></div>
         </div>

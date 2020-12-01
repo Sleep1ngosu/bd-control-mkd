@@ -1,0 +1,93 @@
+.BuildingBlock__wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    border-bottom: .1rem solid #D9D5EC;
+    cursor: pointer;
+
+    &__wrapper {
+        position: relative;
+    }
+}
+
+.BuildingBlock__column__right {
+    display: flex;
+    width: 62rem;
+    height: 100%;
+    margin-left: auto;
+}
+
+.BuildingBlock {
+
+    &__moreIcon {
+        z-index: 2;
+        position: absolute;
+        left: 106rem;
+        top: 2rem;
+    }
+
+    &__menu {
+        z-index: 5;
+        background-color: #fff;
+        position: absolute;
+        right: -10rem;
+        top: 0;
+        width: 22.4rem;
+        height: 13.3rem;
+        border: .1rem solid #C6C2DE;
+        box-shadow: 0 .5rem .8rem rgba(0, 0, 0, 0.2);
+        border-radius: .6rem;
+    }
+
+    &__rectangle {
+
+        &__top,
+        &__bottom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 3.2rem;
+            height: 1.8rem;
+            right: 4.2rem;
+            border-radius: .3rem;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+        }
+
+        &__top {
+            top: .6rem;
+        }
+
+        &__bottom {
+            top: 3.2rem;
+        }
+    }
+
+    &__checkBoxIcon,
+    &__checkBoxActiveIcon {
+        z-index: 2;
+        position: absolute;
+        top: 1.8rem;
+        left: 1.6rem;
+    }
+
+    &__shapeDownIcon,
+    &__shapeUpIcon {
+        position: absolute;
+        top: 2.1rem;
+        left: 4.8rem;
+    }
+
+    &__column__right {
+        margin-right: 2.6rem;
+    }
+
+    &__toggleBlock {
+        background-color: #F2F0F9;
+        width: 100%;
+    }
+}

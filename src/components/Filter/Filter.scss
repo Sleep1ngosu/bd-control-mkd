@@ -1,0 +1,28 @@
+.Filter__wrapper {
+    position: absolute;
+    top: 0;
+    right: 3.3rem;
+    width: 22.4rem;
+    height: 19.8rem;
+    border: .1rem solid #C6C2DE;
+    box-shadow: 0 .5rem .8rem rgba(0, 0, 0, 0.2);
+    border-radius: .6rem;
+    background-color: #fff;
+}
+
+.Filter__title {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #6E6893;
+}
+
+.Filter__options {
+    margin-top: 1rem;
+}

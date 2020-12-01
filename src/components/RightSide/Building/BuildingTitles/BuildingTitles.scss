@@ -1,0 +1,16 @@
+.BuildingTitle__wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.BuildingTitle__text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #6E6893;
+}

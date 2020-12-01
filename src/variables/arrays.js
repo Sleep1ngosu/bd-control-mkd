@@ -39,6 +39,11 @@ const arrays = {
         ],
     },
     ObjectsSideHeader: ['Данные', 'Отчеты', 'Собрания', 'Настройки'],
+    Buildings: {
+        title: ['ул. Ленина, дом 7, корп. 1', 'ул. Ленина, дом 7, корп. 1'],
+        subtitle: ['многоквартирный дом', 'многоквартирный дом'],
+    },
+    FilterOptions: ['Все', 'Действующие', 'Архивные', 'Due date', 'Last Login'],
 }
 
 export default arrays

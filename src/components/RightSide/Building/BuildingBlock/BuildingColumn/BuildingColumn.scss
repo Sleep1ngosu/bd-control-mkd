@@ -1,0 +1,41 @@
+.BuildingBlock__column {
+    &__title {
+        display: flex;
+        // align-items: center;
+        padding-top: .8rem;
+        text-overflow: clip;
+        overflow: hidden;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1.8rem;
+        color: #25213B;
+    }
+
+    &__subtitle {
+        display: flex;
+        align-items: center;
+        height: 2.8rem;
+
+        &__text {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1.7rem;
+            letter-spacing: 0.05em;
+            color: #6E6893;
+        }
+    }
+}
+
+.BuildingBlock__status {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    text-align: center;
+    width: 11.2rem;
+    height: 1.7rem;
+    background-color: #E6E6F2;
+    border-radius: 1rem;
+}

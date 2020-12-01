@@ -4,6 +4,7 @@ import HoveredIcon from '../../../HOCs/HoveredIcon'
 import MoreIcon from '../../../assets/svg/icons/MoreIcon'
 import consts from '../../../variables/consts'
 import Info from './Info/Info'
+import { Link } from 'react-router-dom'
 
 function Block(props) {
     const moreIcon = useState(
@@ -40,21 +41,33 @@ function Block(props) {
                 >
                     {moreIcon}
                 </div>
-                <div className="BuildsMenu__block__title">
-                    <span
-                        title={props.title}
-                        className="BuildsMenu__block__title__text"
-                    >
-                        {props.title}
-                    </span>
-                </div>
-                <div className="BuildsMenu__block__subtitle">
-                    <span className="BuildsMenu__block__subtitle__text">
-                        {props.subtitle}
-                    </span>
-                </div>
+                <Link
+                    to={{
+                        pathname: `buildings/${props.index}`,
+                        state: {
+                            title: props.title,
+                        },
+                    }}
+                    style={{ textDecoration: 'none' }}
+                >
+                    <div>
+                        <div className="BuildsMenu__block__title">
+                            <span
+                                title={props.title}
+                                className="BuildsMenu__block__title__text"
+                            >
+                                {props.title}
+                            </span>
+                        </div>
+                        <div className="BuildsMenu__block__subtitle">
+                            <span className="BuildsMenu__block__subtitle__text">
+                                {props.subtitle}
+                            </span>
+                        </div>
+                    </div>
+                </Link>
             </div>
-            <Info style={style} />
+            <Info style={style} index={props.index} title={props.title} />
         </div>
     )
 }
