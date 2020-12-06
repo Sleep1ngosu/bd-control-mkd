@@ -1,6 +1,7 @@
 import React from 'react'
 import './ObjectsSideBlock.scss'
 import ObjectsRectangle from '../ObjectsRectangle/ObjectsRectangle'
+import arrays from '../../../variables/arrays'
 
 function ObjectsSideBlock(props) {
     return (
@@ -9,7 +10,10 @@ function ObjectsSideBlock(props) {
                 <span className="ObjectsSideBlock__field__text">
                     {props.text}
                 </span>
-                <ObjectsRectangle text="0" style={{ right: '1.2rem' }} />
+                <ObjectsRectangle
+                    text={arrays.counterBuildings[props.index]}
+                    style={{ right: '1.2rem' }}
+                />
             </div>
         </div>
     )

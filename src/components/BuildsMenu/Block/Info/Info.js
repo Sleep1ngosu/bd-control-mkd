@@ -7,6 +7,7 @@ function Info(props) {
     return (
         <div className="BuildsMenu__block__info__wrapper" style={props.style}>
             <div className="BuildsMenu__block__info__header">
+                {/* DATA MUST BE TRANSFERRED TO PROPS FROM BLOCK.JS */}
                 <Text text="77:01:002001:2154" />
                 <Text text="Дата постройки: 2001 г." />
             </div>

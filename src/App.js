@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import './App.scss'
 import AddObject from './components/RightSide/AddObject/AddObject'
 import { Switch, Route } from 'react-router-dom'
@@ -8,9 +9,15 @@ import ObjectsSideHeader from './components/ObjectsSide/ObjectsSideHeader/Object
 import Building from './components/RightSide/Building/Building'
 import LeftSide from './components/LeftSide/LeftSide'
 
-function App() {
+function App(props) {
+    let blockedStyle
+    props.isBlocked
+        ? (blockedStyle = { display: 'block' })
+        : (blockedStyle = { display: 'none' })
+
     return (
         <div className="App">
+            <div style={blockedStyle} className="blocked"></div>
             <Switch>
                 <Route path="/buildings" component={ObjectsSideHeader} />
             </Switch>
@@ -42,7 +49,13 @@ function App() {
     )
 }
 
-export default App
+const mapStateToProps = (state) => {
+    return {
+        isBlocked: state.blocker,
+    }
+}
+
+export default connect(mapStateToProps)(App)
 
 // const leftSideBlockList = arrays.blocks.map((value, index) => {
 //     return (

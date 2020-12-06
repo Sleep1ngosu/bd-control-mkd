@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './ToggleBlockOwner.scss'
 import MoreIcon from '../../../../../../assets/svg/icons/MoreIcon'
 import HoveredIcon from '../../../../../../HOCs/HoveredIcon'

@@ -23,8 +23,6 @@
             letter-spacing: 0.05em;
             text-transform: uppercase;
         }
-
-        
     }
 
     &__input {
@@ -33,6 +31,7 @@
         background-color: #F4F2FF;
         border-radius: .6rem;
         border: none;
+        padding-left: 1rem;
     }
 
 }

@@ -4,7 +4,7 @@ import LeftSideBlock from '../LeftSideBlock/LeftSideBlock'
 import LeftSideList from '../LeftSideList/LeftSideList'
 import arrays from '../../variables/arrays'
 
-function MainLeftSide() {
+function MainLeftSide(props) {
     const [listVisibility, setListVisibility] = useState({
         data: {
             isVisible: false,

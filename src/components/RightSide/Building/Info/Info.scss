@@ -1,0 +1,33 @@
+.Building__header__info {
+
+    position: absolute;
+    width: 16.8rem;
+    height: 6.4rem;
+    background-color: #fff;
+    border: .1rem solid #D9D5EC;
+    filter: drop-shadow(0 0 .5rem rgba(0, 0, 0, 0.25));
+    padding: .8rem;
+    cursor: default;
+
+    &__title {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        letter-spacing: 0.05em;
+        color: #000000;
+    }
+
+    &__subtitle {
+        margin-top: .8rem;
+        width: 100%;
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+        color: #000000;
+    }
+}

@@ -23,6 +23,7 @@ function LeftSideList(props) {
                     text={value}
                     id={props.id}
                     redirect={props.redirect[index]}
+                    index={index}
                 />
             )
         })

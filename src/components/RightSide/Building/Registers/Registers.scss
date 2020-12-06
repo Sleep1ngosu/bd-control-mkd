@@ -1,0 +1,101 @@
+.Building__registers__wrapper {
+    display: flex;
+    flex-direction: column;
+    z-index: 11;
+    position: absolute;
+    right: 0rem;
+    top: 10.5rem;
+    width: 60rem;
+    height: 40rem;
+    background: #FFFFFF;
+    border: .1rem solid #D9D5EC;
+    box-shadow: 0 0 .6rem rgba(0, 0, 0, 0.25);
+    border-radius: .6rem;
+}
+
+.Building__registers {
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 4.2rem;
+        border-bottom: .1rem solid #D9D5EC;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        background-color: #F2F0F9;
+        border-radius: .5rem .5rem 0 0;
+    }
+
+    &__body {
+        display: flex;
+        margin-top: 1.6rem;
+
+        &__left {
+            display: flex;
+            flex-direction: column;
+            margin-left: .7rem;
+            width: 29.2rem;
+        }
+        
+        &__right {
+            margin-left: 2rem;
+            width: 26.5rem;
+
+            &__calendar {
+                width: 26.5rem;
+                height: 14.7rem;
+                background-color: #F9FAFB;
+                border: .1rem solid #D9D5EC;
+                border-radius: .6rem;
+            }
+        }
+    }
+
+    &__footer {
+        display: flex;
+        margin-top: 4.1rem;
+        position: relative;
+        height: 5.9rem;
+        width: 100%;
+
+        &__icons {
+            position: relative;
+            height: 100%;
+            width: 15rem;
+
+            &__pdfIcon,
+            &__excelIcon,
+            &__wordIcon {
+                position: absolute;
+                top: 0;
+            }
+    
+            &__pdfIcon {
+                left: 2.2rem;
+            }
+    
+            &__wordIcon {
+                left: 6.2rem;
+            }
+    
+            &__excelIcon {
+                left: 10.2rem;
+            }
+        }
+
+        &__buttons {
+            display: flex;
+            width: 22.5rem;
+            height: 100%;
+            margin-left: auto;
+        }
+
+    }
+}

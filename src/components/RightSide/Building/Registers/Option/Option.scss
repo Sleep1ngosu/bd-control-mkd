@@ -1,0 +1,24 @@
+.Building__registers__option__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 4.8rem;
+}
+
+.Building__registers__option {
+
+    &__radio {
+        position: absolute;
+        left: .9rem;
+    }
+
+    &__title {
+        margin-left: 4.1rem;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        color: rgba(0, 0, 0, 0.87);
+    }
+}

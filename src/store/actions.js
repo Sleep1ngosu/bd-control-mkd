@@ -1,0 +1,2 @@
+export const SET_BLOCKER = 'SET_BLOCKER'
+export const REMOVE_BLOCKER = 'REMOVE_BLOCKER'

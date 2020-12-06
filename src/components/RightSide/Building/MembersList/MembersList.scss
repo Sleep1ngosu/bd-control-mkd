@@ -1,0 +1,98 @@
+.Building__membersList {
+
+    &__icon {
+        position: absolute;
+        top: 4rem;
+        right: 0;
+        width: 6.4rem;
+        height: 6.4rem;
+        cursor: pointer;
+
+        &__active {
+            position: absolute;
+            top: 4rem;
+            right: 51.3rem;
+            width: 6.4rem;
+            height: 6.4rem;
+            cursor: pointer;
+        }
+    }
+
+    &__list {
+        z-index: 4;
+        position: absolute;
+        top: 4rem;
+        right: 0;
+        width: 51.3rem;
+        height: 89.7rem;
+        background-color: #fff;
+    }
+}
+
+.MembersList__wrapper {
+    display: flex;
+    position: relative;
+    width: 51.3rem;
+    height: 89.7rem;
+    border: .1rem solid #D9D5EC;
+}
+
+.MembersList {
+    &__leftSide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 5.6rem;
+        height: 100%;
+        border-right: .1rem solid #D9D5EC;
+
+        &__addMemberIcon {
+            height: 3.2rem;
+            margin-top: .5rem;
+        }
+
+        &__letters {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: .5rem;
+        }
+    }
+
+    &__rightSide {
+        display: flex;
+        flex-direction: column;
+        width: 45.5rem;
+
+        &__header {
+            display: flex;
+            align-items: center;
+            height: 3.9rem;
+            width: 100%;
+            background-color: #F2F0F9;
+            border-bottom: .1rem solid #D9D5EC;
+
+            &__column-1,
+            &__column-2 {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 1.2rem;
+                line-height: 1.5rem;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                color: #6E6893;
+            }
+
+            &__column-1 {
+                width: 26.6rem;
+                margin-left: 2.1rem;
+            }
+
+            &__column-2 {
+                width: 7.2rem;
+                margin-left: 5.8rem;
+            }
+        }
+    }
+}

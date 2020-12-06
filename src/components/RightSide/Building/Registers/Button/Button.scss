@@ -1,0 +1,17 @@
+.Building__registers__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .6rem;
+    border: .1rem solid #6D5BD0;
+    width: 9.9rem;
+    height: 3.9rem;
+    cursor: pointer;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    text-transform: uppercase;
+}

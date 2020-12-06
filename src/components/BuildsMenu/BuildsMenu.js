@@ -10,23 +10,17 @@ import arrays from '../../variables/arrays'
 import Filter from '../Filter/Filter'
 
 function BuildsMenu(props) {
-    // let filterIcon = useState(
-    //     <HoveredIcon
-    //         Component={FilterIcon}
-    //         style={{
-    //             position: 'absolute',
-    //             top: '50%',
-    //             transform: 'translateY(-50%)',
-    //             right: '3.2rem',
-    //         }}
-    //         hoveredIconColor={consts.hoveredIconColor}
-    //         unhoveredIconColor={consts.unhoveredIconColor}
-    //         key="BuildsMenu__hoveredIcon__filterIcon"
-    //     />
-    // )
     let filterStyle, filterIcon
     let [filterIsHovered, setFilterHover] = useState(false)
     let [filterIsShow, setFilterShow] = useState(false)
+
+    //Filter
+    let [activeOption, setActiveOption] = useState(0)
+
+    const chooseActive = (index) => {
+        setActiveOption(index)
+    }
+    ///////////
 
     let sortIcon = useState(
         <HoveredIcon
@@ -120,7 +114,10 @@ function BuildsMenu(props) {
                                 style={filterStyle}
                                 className="BuildsMenu__filterMenu"
                             >
-                                <Filter />
+                                <Filter
+                                    onClick={chooseActive}
+                                    active={activeOption}
+                                />
                             </div>
                         </div>
                         {sortIcon}

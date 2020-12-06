@@ -7,7 +7,11 @@ import arrays from '../../variables/arrays'
 function ObjectsSide() {
     const ObjectsSideList = arrays.lists.objects.list.map((value, index) => {
         return (
-            <ObjectsSideBlock text={value} key={`ObjectsSideBlock__${index}`} />
+            <ObjectsSideBlock
+                text={value}
+                key={`ObjectsSideBlock__${index}`}
+                index={index}
+            />
         )
     })
 

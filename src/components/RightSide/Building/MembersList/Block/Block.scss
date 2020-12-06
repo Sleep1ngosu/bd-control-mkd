@@ -1,0 +1,34 @@
+.MembersList__block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 3.2rem;
+    border-bottom: .1rem solid #D9D5EC;
+
+    &__title {
+        width: 32.3rem;
+        margin-left: 2.1rem;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        letter-spacing: .04rem;
+        color: #25213B;
+    }
+
+    &__checkbox,
+    &__checkbox-active {
+        position: absolute;
+        right: 6.5rem;
+    }
+
+    &__moreIcon {
+        position: absolute;
+        right: 1.3rem;
+
+        &__wrapper {
+            position: relative;
+        }
+    }
+}

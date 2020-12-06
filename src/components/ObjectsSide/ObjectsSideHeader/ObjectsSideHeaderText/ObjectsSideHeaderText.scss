@@ -5,6 +5,11 @@
         align-items: center;
         width: 10rem;
         height: 4rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #E9E9E9;
+        }
     }
 
     &__text {

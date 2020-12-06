@@ -14,7 +14,7 @@ function RadioIcon() {
                 cy="7.5"
                 r="6.75"
                 stroke="#8B83BA"
-                stroke-width="1.5"
+                strokeWidth="1.5"
             />
         </svg>
     )

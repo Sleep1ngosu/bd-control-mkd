@@ -2,7 +2,7 @@ import React from 'react'
 import './LeftSide.scss'
 import MainLeftSide from '../MainLeftSide/MainLeftSide'
 
-function LeftSide() {
+function LeftSide(props) {
     return (
         <div className="left-side__main">
             <div className="left-side__wrapper__logo">

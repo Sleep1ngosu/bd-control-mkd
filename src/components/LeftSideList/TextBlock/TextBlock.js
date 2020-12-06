@@ -3,13 +3,16 @@ import './TextBlock.scss'
 import history from '../../../history'
 import BuildsMenu from '../../BuildsMenu/BuildsMenu'
 import ObjectsRectangle from '../../ObjectsSide/ObjectsRectangle/ObjectsRectangle'
+import arrays from '../../../variables/arrays'
 
 function TextBlock(props) {
     let rectangle = null,
         buildsMenu = null
 
     if (props.id === 'objects') {
-        rectangle = <ObjectsRectangle text="0" />
+        rectangle = (
+            <ObjectsRectangle text={arrays.counterBuildings[props.index]} />
+        )
     }
 
     const [isVisible, setVisible] = useState(false)

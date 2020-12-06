@@ -1,0 +1,21 @@
+.MembersList__menu__option {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 2.7rem;
+    border-radius: .4rem;
+    padding-left: .8rem;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    letter-spacing: 0.05em;
+    color: #25213B;
+
+    &:hover {
+        background-color: #F2F0F9;
+    }
+
+}

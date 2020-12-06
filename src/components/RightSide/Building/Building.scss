@@ -8,6 +8,11 @@ $primaryFieldFontColor: #6E6893;
     margin-left: 3rem;
     margin-top: 7.2rem;
     color: $primaryFieldFontColor;
+
+    &__wrapper {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .Building {
@@ -16,6 +21,12 @@ $primaryFieldFontColor: #6E6893;
         position: relative;
         height: 8rem;
         width: 100%;
+
+        &__mapIcon,
+        &__documentIcon,
+        &__clipboardIcon {
+            position: relative;
+        }
 
         &__title {
             height: 1.6rem;
@@ -51,6 +62,7 @@ $primaryFieldFontColor: #6E6893;
                     font-weight: 500;
                     font-size: 1.4rem;
                     line-height: 1.7rem;
+                    cursor: pointer;
 
                     & b {
                         font-size: 1.8rem;
@@ -138,6 +150,13 @@ $primaryFieldFontColor: #6E6893;
                         font-size: 1.4rem;
                         line-height: 1.7rem;
                         color: #25213B;
+                    }
+                }
+
+                &__registers {
+
+                    &__wrapper {
+                        position: relative;
                     }
                 }
             }

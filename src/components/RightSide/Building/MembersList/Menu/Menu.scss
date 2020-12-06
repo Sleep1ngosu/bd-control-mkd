@@ -1,0 +1,35 @@
+.MembersList__menu__wrapper {
+    position: absolute;
+    right: 1.5rem;
+    top: -.2rem;
+    width: 22.4rem;
+    height: 11.3rem;
+    background: #FFFFFF;
+    border: .1rem solid #C6C2DE;
+    box-shadow: 0 .5rem .8rem rgba(0, 0, 0, 0.2);
+    border-radius: .6rem;
+    z-index: 4;
+}
+
+.MembersList__menu {
+
+    &__top,
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        width: 20.4rem;
+        margin-left: 1rem;
+    }
+
+    &__top {
+        justify-content: center;
+        border-bottom: .1rem solid #D9D5EC;
+        height: 4.9rem;
+    }
+
+    &__bottom {
+        justify-content: space-between;
+    }
+
+
+}
