@@ -1,2 +1,4 @@
 export const SET_BLOCKER = 'SET_BLOCKER'
 export const REMOVE_BLOCKER = 'REMOVE_BLOCKER'
+export const SET_OBJECT = 'SET_OBJECT'
+export const CLEAR_OBJECT = 'CLEAR_OBJECT'

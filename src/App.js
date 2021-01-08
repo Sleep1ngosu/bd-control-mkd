@@ -10,49 +10,50 @@ import Building from './components/RightSide/Building/Building'
 import LeftSide from './components/LeftSide/LeftSide'
 
 function App(props) {
-    let blockedStyle
-    props.isBlocked
-        ? (blockedStyle = { display: 'block' })
-        : (blockedStyle = { display: 'none' })
+	let blockedStyle
+	props.isBlocked
+		? (blockedStyle = { display: 'block' })
+		: (blockedStyle = { display: 'none' })
 
-    return (
-        <div className="App">
-            <div style={blockedStyle} className="blocked"></div>
-            <Switch>
-                <Route path="/buildings" component={ObjectsSideHeader} />
-            </Switch>
-            <div className="left-side__wrapper">
-                <Switch>
-                    <Route path="/buildings" component={ObjectsSide} />
-                    <Route path="/" component={LeftSide} />
-                </Switch>
-            </div>
-            <div className="right-side__wrapper">
-                <Switch>
-                    <Route
-                        exact
-                        path="/add-object"
-                        render={() => <AddObject title="Добавить Объект" />}
-                    />
-                    <Route
-                        exact
-                        path="/import-control"
-                        render={() => (
-                            <ImportControl title="Контроль импорта выписок из егрн" />
-                        )}
-                    />
+	console.log(props.isBlocked)
+	return (
+		<div className="App">
+			<div style={blockedStyle} className="blocked"></div>
+			<Switch>
+				<Route path="/buildings" component={ObjectsSideHeader} />
+			</Switch>
+			<div className="left-side__wrapper">
+				<Switch>
+					<Route path="/buildings" component={ObjectsSide} />
+					<Route path="/" component={LeftSide} />
+				</Switch>
+			</div>
+			<div className="right-side__wrapper">
+				<Switch>
+					<Route
+						exact
+						path="/add-object"
+						render={() => <AddObject title="Добавить Объект" />}
+					/>
+					<Route
+						exact
+						path="/import-control"
+						render={() => (
+							<ImportControl title="Контроль импорта выписок из егрн" />
+						)}
+					/>
 
-                    <Route path="/buildings" component={Building} />
-                </Switch>
-            </div>
-        </div>
-    )
+					<Route path="/buildings" component={Building} />
+				</Switch>
+			</div>
+		</div>
+	)
 }
 
 const mapStateToProps = (state) => {
-    return {
-        isBlocked: state.blocker,
-    }
+	return {
+		isBlocked: state.blocker.blocker,
+	}
 }
 
 export default connect(mapStateToProps)(App)

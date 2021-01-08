@@ -2,19 +2,24 @@ import React from 'react'
 import './Button.scss'
 
 function Button(props) {
-    const style = {
-        backgroundColor: props.color,
-    }
+	const style = {
+		backgroundColor: props.color,
+	}
 
-    if (props.isPush === true) {
-        style['marginLeft'] = 'auto'
-    }
+	if (props.isPush === true) {
+		style['marginLeft'] = 'auto'
+	}
 
-    return (
-        <button className="addObject__button" style={style}>
-            <span className="addObject__button__text">{props.text}</span>
-        </button>
-    )
+	return (
+		<button
+			onClick={props.onClick}
+			type={props.type}
+			className="addObject__button"
+			style={style}
+		>
+			<span className="addObject__button__text">{props.text}</span>
+		</button>
+	)
 }
 
 export default Button
